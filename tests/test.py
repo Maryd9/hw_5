@@ -3,6 +3,8 @@ from selene import browser, have, be
 
 
 def test_form(browser_managment):
+    browser.open('/')
+
     browser.element('[id=firstName]').should(be.blank).type('Антон')
     browser.element('[id=lastName]').should(be.blank).type('Иванов')
     browser.element('[id=userEmail]').should(be.blank).type('test@user.ru')
